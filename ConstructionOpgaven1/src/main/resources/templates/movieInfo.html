@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title th:text="${movie.title}"></title>
+
+
+
+    <style>
+
+        /* style sheets */
+        div.Bigsheet{
+
+
+
+        }
+
+        html,body{
+
+            height: 100%;
+        }
+
+        /* style sheets end */
+
+        /* navbar*/
+
+        div.navContainer{
+
+
+            background-color: black;
+            opacity: 0.9;
+            position: fixed;
+            top: 0px;
+            padding-top: 35px;
+            padding-bottom: 35px;
+            padding-left: 20px;
+            padding-right: 20px;
+
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        div.navLinkL{
+
+            display: flex;
+            padding: 5px 5px 5px 5px;
+
+
+        }
+
+
+        .navLink{
+
+            font-family: Helvetica;
+            font-size: 20px;
+            color: white;
+            text-decoration: none;
+
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        .navLinkH{
+
+            font-family: Helvetica;
+            font-size: 30px;
+            color: white;
+            text-decoration: none;
+
+            padding-left: 5px;
+            padding-right: 10px;
+        }
+
+        .navLink:hover{
+
+            color: black;
+            text-decoration: none;
+            background-color: white;
+        }
+        .navLinkH:hover{
+
+            color: black;
+            text-decoration: none;
+            background-color: white;
+        }
+
+
+        /* navbar end*/
+
+
+        /* hero section*/
+
+
+
+
+        /*movies table */
+
+        div.tableSheet{
+            display: flex;
+            justify-content: center;
+
+
+            padding-top: 150px;
+
+            background-color: hsla(0, 100%, 0%, 0.8);
+
+        }
+
+        div.movieCol{
+            display: flex;
+            width: 50%;
+            justify-content: center;
+            flex-direction: column;
+            margin-bottom:  35px;
+
+        }
+
+        p.heading{
+            font-family: Helvetica;
+            font-size: 35px;
+            color: white;
+        }
+
+        p.text{
+            font-family: Helvetica;
+            font-size: 16px;
+            color: black;
+            text-decoration: none;
+            align-self: center;
+            margin-top: 15px;
+        }
+
+
+        table.content{
+
+            background-color: white;
+            width: 800px;
+            align-content: center;
+
+        }
+
+        /* movies table end */
+
+
+        /* footer*/
+
+        div.footer{
+
+
+            padding-right: 35px;
+            padding-left: 35px;
+            padding-top: 15px;
+            padding-bottom: 10px;
+            background-color: black;
+            color: white;
+            position: absolute;
+            width: 100%;
+
+            display: flex;
+            justify-content: space-between;
+
+
+        }
+
+        /* footer end*/
+
+
+
+
+    </style>
+
+
+</head>
+
+
+<div class="Bigsheet">
+
+
+
+
+
+
+        <!--  navbar -->
+        <div class="navContainer">
+            <div class="navLinkR"> <a class="navLinkH" href="/"> YoutubePlaylist </a> <a class="navLink" href="/create"> Add new movie</a></div>
+
+            <div class="navLinkL"><form action="/">
+                <input type="text" name="sea" placeholder="Search"/>
+            </form> </div>
+
+        </div>
+        <!--  navbar end -->
+
+
+
+
+    <div class="tableSheet">
+
+
+            <div class="movieCol">
+
+
+
+
+
+                <td > <p class="heading"><span th:text="${movie.title}"> Title  </span></p></td>
+                <td > <span> <p class="text"><iframe width="800" height="600" th:src="${movie.getPath()}"> </iframe></p> </span> </td>
+
+
+                <table class="content">
+                    <td style="text-align:center">  <p class="text">Genre: <span th:text="${ movie.genre}"></span></p></td>
+                    <td style="text-align:center">  <p class="text">Duration in m.s: <span th:text="${ movie.duration}"></span></p></td>
+                    <td style="text-align:center">  <p class="text">Year: <span th:text="${ movie.year}"></span></p></td>
+                    <td style="text-align:center">  <p class="text">Rating: <span th:text="${ movie.rating}"></span></p></td>
+                </table>
+
+
+
+
+            </div>
+
+
+
+
+    </div>
+
+
+
+</div>
+
+<div class="footer">
+
+
+    <p> Benjamin LT, Itamar L, Adil MH </p>
+    <p> Construction opg1</p>
+
+</div>
+
+
+<body>
+
+
+
+</body>
+</html>

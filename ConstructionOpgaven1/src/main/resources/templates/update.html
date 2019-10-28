@@ -1,0 +1,141 @@
+
+
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Add new movie</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <style>
+        /* navbar*/
+
+        div.navContainer{
+
+
+            background-color: black;
+            opacity: 0.9;
+            position: fixed;
+            top: 0px;
+            padding-top: 35px;
+            padding-bottom: 35px;
+            padding-left: 20px;
+            padding-right: 20px;
+
+
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+
+
+        .navLink{
+
+            font-family: Helvetica;
+            font-size: 20px;
+            color: white;
+            text-decoration: none;
+
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        .navLinkH{
+
+            font-family: Helvetica;
+            font-size: 30px;
+            color: white;
+            text-decoration: none;
+
+            padding-left: 5px;
+            padding-right: 10px;
+        }
+
+        .navLink:hover{
+
+            color: black;
+            text-decoration: none;
+            background-color: white;
+        }
+        .navLinkH:hover{
+
+            color: black;
+            text-decoration: none;
+            background-color: white;
+        }
+
+
+        /* navbar end*/
+
+        /* footer*/
+
+        div.footer{
+
+
+            padding-right: 35px;
+            padding-left: 35px;
+            padding-top: 15px;
+            padding-bottom: 10px;
+            background-color: black;
+            color: white;
+            position: absolute;
+            width: 100%;
+
+            display: flex;
+            justify-content: space-between;
+
+
+        }
+
+        /* footer end*/
+
+        div.spacer{
+
+            padding-top: 330px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+
+
+<!--  navbar -->
+<div class="navContainer">
+    <div> <a class="navLinkH" href="/"> YoutubePlaylist </a> <a class="navLink" href="/create"> Add new movie</a></div>
+
+
+</div>
+<!--  navbar end -->
+
+
+<div class="spacer">
+    <form class="text-center border border-dark p-5" action="#" th:action="@{/update}" th:object="${movie}" method="post">
+        <p>Title: <input type="text" th:field="*{title}" /></p>
+        <p>Year: <input type="text" th:field="*{year}" /></p>
+        <p>Duration: <input type="text" th:field="*{duration}" /></p>
+        <p>Genre: <input type="text" th:field="*{genre}" /></p>
+        <p><input type="hidden" th:field="*{id}" placeholder="0"/></p>
+        <p>Movie embed url: <input type="url" th:field="*{path}" /></p>
+
+        <p><input type="submit" value="Submit" /> <input type="reset" value="Reset" /></p>
+        <a href="/movies">Cancel</a>
+    </form>
+</div>
+
+
+<div class="footer">
+
+
+    <p> Benjamin LT, Itamar L, Adil MH </p>
+    <p> Construction opg1</p>
+
+</div>
+
+
+</body>
+</html>

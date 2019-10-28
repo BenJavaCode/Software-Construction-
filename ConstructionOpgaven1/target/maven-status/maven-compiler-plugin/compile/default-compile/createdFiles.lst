@@ -1,0 +1,5 @@
+com\example\demo\DemoApplication.class
+com\example\demo\Model\Movie.class
+com\example\demo\Services\MovieService.class
+com\example\demo\Services\MovieServiceImpl.class
+com\example\demo\Controller\AplicationController.class

@@ -281,7 +281,7 @@
                 <td style="text-align:center">
                     <form action="/" th:object="${ratings}" method="post" name="ratingform">
                         <p><input type="hidden" th:value="${movie.title}" name="title" /></p>
-                        <p class="text">Rating: <input type="number" th:field="*{rating}" min="0" max="5"/></p>
+                        <p class="text">Rate: <input type="number" th:field="*{rating}" min="0" max="5"/></p>
                     </form>
                 </td>
 
